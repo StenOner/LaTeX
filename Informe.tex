@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{lipsum}
+\usepackage[margin=1in,left=1.5in]{geometry}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+
+% Fancy Header and Footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\cfoot{}
+\rfoot{\thepage}
+%
+
+\begin{document}
+
+%CARATULA
+\begin{titlepage}
+	\begin{center}
+	\Huge{\bfseries Informe hecho en LaTeX}\\
+	[1.5cm]
+	\textsc{\LARGE Universidad Privada de Tacna}\\
+	[0.75cm]
+	\textsc{\Large Base de Datos II}\\
+	[0.25cm]
+	\textsc{\large Ing. Patrick Cuadros Quiroga}\\
+	[2.25cm]
+	\end{center}
+	\begin{flushleft}
+	\LARGE{Alumno:\\
+	[0.60cm]}
+	\small{ACEVEDO VASQUEZ, LEONARDO \hfill 2014047512}\\
+	\end{flushleft}
+	
+	\vspace{\fill}	
+	\begin{center}
+	\huge{\today}	
+	\end{center}
+\end{titlepage}
+
+%TABLA DE CONTENIDO
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+
+%CUERPO DEL INFORME
+\section{Introduccion}\label{sec:intro}
+\lipsum[1]
+\lipsum[1]
+\newpage
+\section{Graficos}\label{sec:fig}
+\lipsum[2]
+
+% Insertar figura
+\begin{figure}[H]
+	\centering
+	\caption{Caption para Imagen 1.}
+	\includegraphics[height=3in]{C:/Users/LenoVo/Desktop/Informe_LaTeX/imagenes/img1.jpg}
+	\label{fig:fig1}
+\end{figure}
+\subsection{Venta}\label{sec:sel}
+\lipsum[3]
+\begin{figure}[H]
+	\centering
+	\caption{Caption para Imagen 2.}
+	\includegraphics[height=3in]{C:/Users/LenoVo/Desktop/Informe_LaTeX/imagenes/img2.png}
+\end{figure}
+\newpage
+\section{Tablas}\label{sec:table}
+Tabla que contiene cierta informacion.
+\begin{table}[H]
+	\centering
+	\label{tab:tab1}
+	\caption{Caption para la tabla 1.}
+	\begin{tabular}{l c c}
+		\bfseries{Nomenclatura} & \bfseries{Simbolo} & \bfseries{Gas Noble?} \\ \hline
+		Argon & Ar & Si \\
+		Calcio & Ca & No \\
+		Krypton & Kr & Si \\
+		Hierro & Fe & No \\
+	\end{tabular}
+\end{table}
+\newpage
+\section{Webgrafia}\label{sec:web}
+\url{http://latex.org/forum/viewtopic.php?t=4160} \\
+\url{https://en.wikibooks.org/wiki/LaTeX/Hyperlinks} \\
+\url{https://tex.stackexchange.com/questions/183408/how-to-flush-right-in-same-line} \\
+\end{document}
